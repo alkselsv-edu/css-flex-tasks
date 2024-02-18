@@ -1,7 +1,6 @@
 const { test, expect } = require("@playwright/test");
 
-test.beforeEach(async ({ page }, testInfo) => {
-  testInfo.snapshotPath = (name) => `${testInfo.file}-snapshots/${name}`;
+test.beforeEach(async ({ page }) => {
   await page.goto("/6-items-flexible.html");
 });
 

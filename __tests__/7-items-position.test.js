@@ -12,8 +12,7 @@ const settings = {
   },
 };
 
-test.beforeEach(async ({ page }, testInfo) => {
-  testInfo.snapshotPath = (name) => `${testInfo.file}-snapshots/${name}`;
+test.beforeEach(async ({ page }) => {
   await page.goto("/7-items-position.html");
   await page.setViewportSize(settings.viewport);
 });
